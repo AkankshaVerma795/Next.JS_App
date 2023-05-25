@@ -14,7 +14,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useEffect } from "react";
 import Login from "../Login";
-import Contact from  "../Contact";
+//import Contact from  "../Contact";
+// import '../../styles/globals.css';
+//import '../../global.css';
 
 
 
@@ -181,20 +183,22 @@ const userLogout=()=>{
     >
     
       <Divider/>
-      <div style={{ display:"block", padding: "20px", margin:"20px", listStyleType: "none"}}><ul></ul>
+      <div className="sidebar" style={{ display:"block", padding: "20px", margin:"20px", listStyleType: "none"}}>
+      <ul>
       <li className={router.pathname == "/Home" ? "active" : ""}>
-      <Link href="/Home"  style={{marginLeft:"30px", textDecoration: "none"}}>
+      <Link className="sidebar-menu" href="/Home"  style={{marginLeft:"30px", textDecoration: "none"}}>
       Home</Link>
      </li>
       <li className={router.pathname == "/About" ? "active" : ""}>
-      <Link href="/About"  className="nav-link" style={{marginLeft:"30px", textDecoration: "none"}}>About</Link>
+      <Link href="/About"  className="nav-link sidebar-menu" style={{marginLeft:"30px", textDecoration: "none"}}>About</Link>
       </li>
       <li className={router.pathname == "/Contact" ? "active" : ""}>
-      <Link href="/Contact"  className="nav-link" style={{marginLeft:"30px", textDecoration: "none"  }}>Contact</Link>
+      <Link  href="/Contact"  className="nav-link sidebar-menu" style={{marginLeft:"30px", textDecoration: "none"  }}>Contact</Link>
      </li>
      <li className={router.pathname == "/components/Post" ? "active" : ""}>
-     <Link href="/components/Post"  className="nav-link" style={{marginLeft:"30px", textDecoration: "none"}}>Post</Link>
+     <Link   href="/components/Post"  className="nav-link sidebar-menu" style={{marginLeft:"30px", textDecoration: "none"}}>Post</Link>
       </li>
+      </ul>
       </div>
     </Drawer>
     

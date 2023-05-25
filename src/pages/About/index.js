@@ -4,10 +4,10 @@ import React from "react";
 import { useEffect } from "react";
 import DataTable from "react-data-table-component";
 import axios from "axios";
-import * as Tooltip from "@radix-ui/react-tooltip";
-import { PlusIcon } from "@radix-ui/react-icons";
-
-
+//import * as Tooltip from "@radix-ui/react-tooltip";
+//import { PlusIcon } from "@radix-ui/react-icons";
+import IndexPage from '../Tooltip/IndexPage';
+//import './global.css';
 
 const Table = () => {
   const column = [
@@ -73,21 +73,9 @@ const Table = () => {
    
       <input type="text" placeholder="search..." onChange={handleFilter} style={{padding: '6px 10px'}}></input>
    </div>
-    <Tooltip.Provider>
-    <Tooltip.Root>
-      <Tooltip.Trigger asChild>
-        <button className="IconButton">
-          <PlusIcon />
-        </button>
-      </Tooltip.Trigger>
-      <Tooltip.Portal>
-        <Tooltip.Content className="TooltipContent" sideOffset={5}>
-          Add
-          <Tooltip.Arrow className="TooltipArrow" />
-        </Tooltip.Content>
-      </Tooltip.Portal>
-    </Tooltip.Root>
-  </Tooltip.Provider>
+   <div >
+   <IndexPage/>
+   </div>
       <DataTable
         columns={column}
         data={filterRecords}

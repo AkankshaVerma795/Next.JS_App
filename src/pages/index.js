@@ -12,7 +12,7 @@ export default function Home() {
 
   let requestedPath=router.pathname;
   
-  console.log("requestedPath is " + requestedPath);
+
 
   useEffect(() => {
 

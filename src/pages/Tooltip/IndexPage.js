@@ -34,3 +34,35 @@
 // };
 
 // export default IndexPage;
+import React from 'react';
+import * as Tooltip from '@radix-ui/react-tooltip';
+import { PlusIcon } from '@radix-ui/react-icons';
+// import './style.css';
+
+const TooltipDemo = () => {
+  return (
+    <Tooltip.Provider>
+      <Tooltip.Root>
+        <Tooltip.Trigger asChild>
+          <button className="IconButton">
+            <PlusIcon />
+          </button>
+        </Tooltip.Trigger>
+        <Tooltip.Portal>
+          <Tooltip.Content className="TooltipContent" sideOffset={5}>
+            <div className="card">
+            <h1>Sign in </h1>
+            <p>new User</p>
+            <h2>Success login</h2>
+
+
+            </div>
+            <Tooltip.Arrow className="TooltipArrow" />
+          </Tooltip.Content>
+        </Tooltip.Portal>
+      </Tooltip.Root>
+    </Tooltip.Provider>
+  );
+};
+
+export default TooltipDemo;
